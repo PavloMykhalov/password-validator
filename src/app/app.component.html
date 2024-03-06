@@ -4,7 +4,7 @@
       <input type="{{ isShown ? 'text' : 'password'}}" class="h-5 outline-none" [(ngModel)]="password" name="password"
         (input)="checkPasswordStrength()" placeholder="Check your password">
       <button (click)="togglePasswordVisibility()" class="absolute right-2 top-3 hover:text-white duration-300">
-        <img src="{{ isShown ? '/assets/icons/icon-visibility-off.svg' : '/assets/icons/icon-visibility.svg' }}"
+        <img src="{{ isShown ? './assets/icons/icon-visibility-off.svg' : './assets/icons/icon-visibility.svg' }}"
           alt="toggle visibility" class="w-5 h-5">
       </button>
     </div>
