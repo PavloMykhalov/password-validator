@@ -1,6 +1,6 @@
 # Preview
 
-You can see preview by this link: [Angular CLI](https://pavlomykhalov.github.io/password-validator/).
+You can see preview by this link: [preview](https://pavlomykhalov.github.io/password-validator/).
 
 ## Description
 
