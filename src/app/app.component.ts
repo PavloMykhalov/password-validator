@@ -12,7 +12,6 @@ import { RouterOutlet } from '@angular/router';
     CommonModule
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   password: string = '';
