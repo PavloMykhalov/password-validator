@@ -10,7 +10,7 @@
     </div>
     <div class="w-full flex flex-col gap-2">
       <p>Easy</p>
-      <div class="w-full h-2 rounded-md" [ngClass]="{
+      <div class="w-full h-2 rounded-md transition-all duration-300" [ngClass]="{
         'bg-gray-500': passwordStrength === '',
         'bg-red-500': passwordStrength === 'short' || passwordStrength === 'easy',
         'bg-yellow-500': passwordStrength === 'medium',
@@ -18,7 +18,7 @@
       }">
       </div>
       <p>Medium</p>
-      <div class="w-full h-2 rounded-md" [ngClass]="{
+      <div class="w-full h-2 rounded-md transition-all duration-300" [ngClass]="{
         'bg-gray-500': passwordStrength === '' || passwordStrength === 'easy',
         'bg-red-500': passwordStrength === 'short',
         'bg-yellow-500': passwordStrength === 'medium',
@@ -26,7 +26,7 @@
       }">
       </div>
       <p>Strong</p>
-      <div class="w-full h-2 rounded-md" [ngClass]="{
+      <div class="w-full h-2 rounded-md transition-all duration-300" [ngClass]="{
         'bg-gray-500': passwordStrength === '' || passwordStrength === 'easy' || passwordStrength === 'medium',
         'bg-red-500': passwordStrength === 'short',
         'bg-green-700': passwordStrength === 'strong',
