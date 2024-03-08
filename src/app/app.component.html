@@ -1,39 +1,6 @@
 <main class="w-screen h-screen flex justify-center items-center">
   <section class="min-w-1/6 min-h-1/7 border border-gray-300 rounded-lg shadow-lg p-6">
-    <div class="relative w-full border mb-2 rounded-md px-4 py-2">
-      <input type="{{ isShown ? 'text' : 'password'}}" class="h-5 outline-none" [(ngModel)]="password" name="password"
-        (input)="checkPasswordStrength()" placeholder="Check your password">
-      <button (click)="togglePasswordVisibility()" class="absolute right-2 top-3 hover:text-white duration-300">
-        <img src="{{ isShown ? 'assets/icons/icon-visibility-off.svg' : 'assets/icons/icon-visibility.svg' }}"
-          alt="toggle visibility" class="w-5 h-5">
-      </button>
-    </div>
-    <div class="w-full flex flex-col gap-2">
-      <p>Easy</p>
-      <div class="w-full h-2 rounded-md transition-all duration-300" [ngClass]="{
-        'bg-gray-500': passwordStrength === '',
-        'bg-red-500': passwordStrength === 'short' || passwordStrength === 'easy',
-        'bg-yellow-500': passwordStrength === 'medium',
-        'bg-green-700': passwordStrength === 'strong',
-      }">
-      </div>
-      <p>Medium</p>
-      <div class="w-full h-2 rounded-md transition-all duration-300" [ngClass]="{
-        'bg-gray-500': passwordStrength === '' || passwordStrength === 'easy',
-        'bg-red-500': passwordStrength === 'short',
-        'bg-yellow-500': passwordStrength === 'medium',
-        'bg-green-700': passwordStrength === 'strong',
-      }">
-      </div>
-      <p>Strong</p>
-      <div class="w-full h-2 rounded-md transition-all duration-300" [ngClass]="{
-        'bg-gray-500': passwordStrength === '' || passwordStrength === 'easy' || passwordStrength === 'medium',
-        'bg-red-500': passwordStrength === 'short',
-        'bg-green-700': passwordStrength === 'strong',
-      }">
-      </div>
-    </div>
+    <app-input-form (passwordStrengthChange)="onPasswordStrengthChange($event)"></app-input-form>
+    <app-password-strength-zone [passwordStrength]="passwordStrength"></app-password-strength-zone>
   </section>
 </main>
-
-<router-outlet />
